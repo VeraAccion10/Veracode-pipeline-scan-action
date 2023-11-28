@@ -19,7 +19,7 @@ If the action will run within a PR, it will automatically add a comment with all
 ![](/media/pr-comment.png)  
   
 If the parameter `fail_build` is set to `true`, the action will fail the step upon findings. If set to `false`, the step will not show as failed.  
-![](/media/fail-build.png)  
+![](/media/fail-build.png)  ccc
   
 The full output of the action can still be reviewed on the action run overview and on the command line output.  
  ![](/media/action-overview.png)  
