@@ -61,13 +61,13 @@ export async function checkParameters (parameters:any):Promise<string>  {
                 url: 'https://'+apiUrl+uriPath+queryparams
             });
         const authval = auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY)
-        core.info('---authvalue----'+authval)
+       
             if (parameters.debug == 1 ){
                 core.info('---- DEBUG OUTPUT START ----')
                 core.info('---- check-parameters.ts / checkParameters() - find the policy via API----')
                 core.info('---- Response Data ----')
                 core.info(JSON.stringify(response.data))
-                core.info('---- DEBUG OUTPUT END ----')
+                core.info('---- DEBUG OUTPUT END ----'+authval)
             }
 
             if ( response.data.page.total_elements != '0' ){
