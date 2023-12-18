@@ -18663,6 +18663,8 @@ function checkParameters(parameters) {
                 core.info('Something went wrong with fetching the correct policy');
             }
             else {
+		const authval = auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY)
+	         core.info('authval'+ authval)
                 core.info('NO POLICY FOUND - NO POLICY WILL BE USED TO RATE FINDINGS');
                 throw new Error('NO POLICY FOUND - NO POLICY WILL BE USED TO RATE FINDINGS')
             }
