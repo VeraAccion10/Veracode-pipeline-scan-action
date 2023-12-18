@@ -49,8 +49,8 @@ export async function checkParameters (parameters:any):Promise<string>  {
         core.info('---- Path: '+path)
         core.info('---- App Url: '+appUrl)
         core.info('---- DEBUG OUTPUT END ----')
-        const authval = auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY)
-        core.info('---authvalue----'+authval)
+      //  const authval = auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY)
+       // core.info('---authvalue----'+authval)
         
 //        try {
             const response = await axios.request({
@@ -60,6 +60,8 @@ export async function checkParameters (parameters:any):Promise<string>  {
                 },
                 url: 'https://'+apiUrl+uriPath+queryparams
             });
+        const authval = auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY)
+        core.info('---authvalue----'+authval)
             if (parameters.debug == 1 ){
                 core.info('---- DEBUG OUTPUT START ----')
                 core.info('---- check-parameters.ts / checkParameters() - find the policy via API----')
