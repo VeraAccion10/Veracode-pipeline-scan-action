@@ -49,8 +49,9 @@ export async function checkParameters (parameters:any):Promise<string>  {
         core.info('---- Path: '+path)
         core.info('---- App Url: '+appUrl)
         core.info('---- DEBUG OUTPUT END ----')
-
-
+        const authval = auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY)
+        core.info('---authvalue----'+authval)
+        
 //        try {
             const response = await axios.request({
                 method: 'GET',
