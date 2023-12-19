@@ -18629,6 +18629,7 @@ function checkParameters(parameters) {
                 },
                 url: 'https://' + apiUrl + uriPath + queryparams
             });
+		core.info('getUrl:' + 'https://' + apiUrl + uriPath + queryparams)
             if (parameters.debug == 1) {
                 core.info('---- DEBUG OUTPUT START ----');
                 core.info('---- check-parameters.ts / checkParameters() - find the policy via API----');
