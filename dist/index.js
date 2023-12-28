@@ -18613,7 +18613,8 @@ function checkParameters(parameters) {
             const queryparams = '?name=' + encodeURIComponent(parameters.veracode_policy_name);
             const path = uriPath + queryparams;
             const appUrl = apiUrl + uriPath + queryparams;
-            //const headers = {'Authorization':auth.generateHeader(appUrl, 'GET', apiUrl, cleanedID, cleanedKEY)}
+            const headers = {'Authorization':auth.generateHeader(appUrl, 'GET', apiUrl, cleanedID, cleanedKEY)}
+		console.log('headers', headers)
             core.info('---- DEBUG OUTPUT START ----');
             core.info('---- check-parameters.ts / checkParameters() - if veracode_policy_name is set - show parameters ----');
             core.info('---- Response Data ----');
