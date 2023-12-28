@@ -18583,6 +18583,7 @@ const auth = __importStar(__nccwpck_require__(6980));
 //import { calculateAuthorizationHeader } from './veracode-hmac'
 function checkParameters(parameters) {
     var _a, _b, _c, _d;
+	console.log("in check param")
     return __awaiter(this, void 0, void 0, function* () {
         if (parameters.debug == 1) {
             core.info('---- DEBUG OUTPUT START ----');
