@@ -18630,7 +18630,7 @@ function checkParameters(parameters) {
                 },
                 url: 'https://' + apiUrl + uriPath + queryparams
             });
-		core.info('auth'+ auth.generateHeader(path, 'GET', apiUrl, cleanedID, cleanedKEY))
+		
 		core.info('getUrl:' + 'https://' + apiUrl + uriPath + queryparams)
             if (parameters.debug == 1) {
                 core.info('---- DEBUG OUTPUT START ----');
